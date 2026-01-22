@@ -1,0 +1,19 @@
+# --- Ejecutables y objetos ---
+*.exe
+*.obj
+*.o
+*.out
+*.app
+
+# --- Carpetas de VS Code ---
+# Esto evita que subas tu configuración personal de la terminal o del compilador
+.vscode/
+
+# --- Archivos de depuración (Debug) ---
+*.pdb
+*.ilk
+*.idb
+
+# --- Mac/Linux temporales ---
+.DS_Store
+[Bb]uild/
