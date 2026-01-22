@@ -1,4 +1,3 @@
-// Para declarar un array como tipo de dato definido por el usuario, lo definiremos mediante TYPEDEF TIPO tNombre[];
 #include <iostream>
 #include <cstdlib>
 using namespace std;
