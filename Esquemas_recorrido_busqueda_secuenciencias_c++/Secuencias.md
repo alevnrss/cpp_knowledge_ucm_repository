@@ -1,27 +1,30 @@
-Secuencia es una sucesion de elementos de un mismo tipo que se acceden linealmente
-Esto suena mucho a array, pues el array se trata de una sucesion o secuencia de elementos
-del mismo tipo y que se acceden linealmente a traves de un indice comun.
+# SECUENCIAS, TIPOS DE SECUENCIAS Y FINAL DE UNA SECUENCIA.
 
-En las secuencias siempre hay un ultimo elemento.
+### ¿Qué es una secuencia?.
 
-Las secuencias pueden ser:
-secuencias explicitas -> teclado, archivo.
-secuencias calculadas -> formulas de recurrencia 
-secuencias tipo listas -> arrays, structs.
+Conocemos como **_Secuencia_** a una sucesion de elementos de un mismo tipo a los que dichos elementos se acceden linealmente.
 
-En las secuencias explicitas manejaremos los datos leidos por teclado o leidos de un archivo.
-Y siempre con un elemento especial al final de la secuencia que seria el centinela.
+### Tipos de secuencias. 
 
--- Deteccion del final de la secuencia explicita de archivo.
+Las secuencias pueden ser de **3 tipos diferentes**:
+1. ***SECUENCIAS EXPLICITAS*** -> teclado, archivo.
+2. ***SECUENCIAS CALCULADAS*** -> formulas de recurrencia. Recursividad 
+3. ***SECUENCIAS TIPO DATO ESTRUCTURADO(LISTAS)*** -> Arrays unidimensionales o multidimensionales, structs, etc...
+
+### Final de una secuencia.
+
+Es importante identificar cual es el final de una secuencia, pues nos servirá para poder utilizar los famosos algoritmos de `Recorrido y Busqueda`.
+
+1. ***Deteccion del final de la secuencia explicita de tipo ARCHIVO.TXT***
 Para detectar el final de la secuencia de un archivo habra dos opciones. 
-    - Detectar la marca del final del archivo (EOF)
-    - Detectar un valor centinela final
+    - Detectar la marca del final del archivo `(EOF)`.
+    - Detectar un valor `centinela` final.
 
--- Deteccion del final de la secuencia explicita de teclado
+2. ***Deteccion del final de la secuencia explicita de tipo TECLADO***
 Para detectar el final de la secuencia de datos leidos por teclado habra dos opciones
-    - Preguntar al usuario si quiere introducir un dato nuevo
-    - Preguntar al principio cuantos datos va a introducir
-    - Detectar un valor centinela final
+    - Preguntar al usuario si quiere introducir un dato nuevo.
+    - Preguntar al principio cuantos datos va a introducir.
+    - Detectar un valor `centinela` final.
 
 
 Para los diferentes tipos de secuencias, existe dos tipos de esquema de tratarmiento de secuencias:
