@@ -164,6 +164,3 @@ cadena.rfind("ef");              // Salida = ; el primer "ef" se encuentra en la
 cadena.rfind("i");               // Salida -1; no se encontrara nunca la i   
 
 ```
-
-
-

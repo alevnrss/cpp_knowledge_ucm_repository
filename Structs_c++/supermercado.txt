@@ -1,0 +1,17 @@
+50.45 NOSenior++ efectivo
+123.12 NOSenior++ tarjeta
+5.00 NOSenior++ movil
+36.00 Senior++ efectivo
+-1
+1.20 NOSenior++ movil
+40.00 Senior++ tarjeta
+65.25 Senior++ efectivo
+-1
+54.23 Senior++ efectivo
+56.00 Senior++ movil
+-1
+-1
+9.87 NOSenior++ efectivo
+43.00 Senior++ movil
+21.40 NOSenior++ tarjeta
+-1
