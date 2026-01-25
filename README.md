@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C%2B%2B-%2300599C?style=for-the-badge&logo=c%2B%2B" alt="C++" />
   <img src="https://img.shields.io/badge/Standard-C%2B%2B20-blue?style=for-the-badge" alt="C++ Standard" />
-  <img src="https://img.shields.io/badge/IDE-CLion%20%2F%20VSCode-brightgreen?style=for-the-badge&logo=clion" alt="IDE" />
+  <img src="https://img.shields.io/badge/IDE-VSCode2022%20%2F%20VSCode-brightgreen?style=for-the-badge&logo=clion" alt="IDE" />
 </p>
 
 ---
