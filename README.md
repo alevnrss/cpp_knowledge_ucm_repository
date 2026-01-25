@@ -1,4 +1,4 @@
-[![Development](https://skillicons.dev/icons?i=cpp,java,js,ts,html,css,c&perline=10)](https://skillicons.dev)
+[![Development](https://skillicons.dev/icons?i=cpp&perline=10)](https://skillicons.dev)
 # C++ Core & Systems Development
 
 <p align="center">
