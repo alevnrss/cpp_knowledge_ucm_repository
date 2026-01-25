@@ -24,13 +24,6 @@ Este repositorio contiene mi progresión, algoritmos y proyectos desarrollados e
 * **Build System:** CMake
 * **Debugging:** GDB / Valgrind
 * **Key Topics:** OOP, STL, Memory Management, Smart Pointers.
-
-## 📂 Project Structure
-* 📂 `Basics/`: Sintaxis fundamental y tipos de datos.
-* 📂 `DataStructures/`: Implementación manual de listas, pilas y colas.
-* 📂 `Arduino_Projects/`: Integración de C++ con hardware.
-* 📂 `Algorithms/`: Resolución de problemas y optimización.
-
 ---
 
 <details>
