@@ -1,4 +1,12 @@
-# <img src="https://skillicons.dev/icons?i=cpp" width="40" vertical-align="middle" /> C++ Core & Systems Development
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=cpp" width="100" />
+</p>
+
+<h1 align="center">C++ Core & Systems Development</h1>
+
+<p align="center">
+  <i>Explorando la gestión de memoria, sistemas embebidos y algoritmos de alto rendimiento.</i>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C%2B%2B-%2300599C?style=for-the-badge&logo=c%2B%2B" alt="C++" />
