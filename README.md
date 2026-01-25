@@ -1,5 +1,4 @@
-[![Development](https://skillicons.dev/icons?i=cpp&perline=10)](https://skillicons.dev)
-# C++ Core & Systems Development
+# <img src="https://skillicons.dev/icons?i=cpp" width="40" vertical-align="middle" /> C++ Core & Systems Development
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C%2B%2B-%2300599C?style=for-the-badge&logo=c%2B%2B" alt="C++" />
