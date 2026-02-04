@@ -12,34 +12,38 @@ void mostrarMatriz(const tMatriz m);
 
 // Prototipos
 void cargarMatriz(tMatriz m, ifstream& archivo, bool& exito);
-void filaConfortable(tMatriz m, int fila, bool& exito );
+bool filaConfortable(const tMatriz m, int fila );
+int exploraMatriz(const tMatriz m);
 
 int main()
 {
     tMatriz m;
     ifstream archivo;
-    bool exito;
+    bool exito, encontrado;
+    int totalConfortables;
 
     cargarMatriz(m, archivo, exito);
 
-    if (exito) // funcion para cargar matriz
+    if (!exito) // funcion para cargar matriz
         cout << "ERROR al cargar la matriz" << endl;
     else
     {
         mostrarMatriz(m);
-        filaConfortable(m, 55, exito);
-        if(!exito){
-            cout << "No es confortable";
+        encontrado = filaConfortable(m, 5);
+        if(!encontrado){
+            cout << "No es confortable" << endl;
         }else{
-            cout << "Es confortable";
+            cout << "Es confortable" << endl;
         }
-        
 
+        totalConfortables = exploraMatriz(m);
+        cout << "Hay un total de " << totalConfortables << " arboles confortables";
+        
     }
     return 0;
 }
 
-// A�ADE AQU� LA IMPLEMENTACI�N DE TUS FUNCIONES
+// Implementacion de funciones.
 
 // subprograma para la carga de la matriz con respecto a la
 void cargarMatriz(tMatriz m, ifstream& archivo, bool& exito){
@@ -47,9 +51,10 @@ void cargarMatriz(tMatriz m, ifstream& archivo, bool& exito){
     if(!archivo.is_open()){
         exito = false;
     }else{
+        exito = true;
         int i = 0;
         int j;
-        while(i < NUMARBOLES && !archivo.eof()){
+        while(i < NUMARBOLES && !archivo.eof()){        
             j = 0;
             while(j < NUMPAJAROS){
                 archivo >> m[i][j];
@@ -57,26 +62,40 @@ void cargarMatriz(tMatriz m, ifstream& archivo, bool& exito){
             }
             i++;
         }
+        archivo.close();
     }
 
 }
 
 // Subprograma para saber si el arbol seleccionado es confortable o no lo es.
-void filaConfortable(tMatriz m, int fila, bool& exito ){
+bool filaConfortable(const tMatriz m, int fila ){
     
     int indiceColumna = 0, sumatorio = 0;
-    exito = false;
-    while(indiceColumna < NUMPAJAROS && !exito){
+    bool encontrado = false;
+    while(indiceColumna < NUMPAJAROS && !encontrado){
         sumatorio = sumatorio + m[fila][indiceColumna];
         if(sumatorio >= 30){
-            exito = true;
+            encontrado = true;
         }else{
             indiceColumna++;
         }
     }
+
+    return encontrado;
 }
 
-// subprograma para la visualizaci�n de matrices
+// Subprograma para devolver el numero de arboles que son confortables.
+int exploraMatriz(const tMatriz m){
+    int total = 0;
+    for(int i = 0; i < NUMARBOLES; i++){
+        if(filaConfortable(m, i)){
+            total++;
+        }
+    }
+    return total;
+}
+
+// subprograma para la visualizacion de matrices
 void mostrarMatriz(const tMatriz m)
 {
     cout << "MATRIZ" << endl;
