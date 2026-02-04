@@ -65,17 +65,21 @@ int main()
 
 tColor colorMasUtilizado(const tPantalla pantalla, int fila)
 {
-    int arrayContadores[NUM_COLORES] = {0};     // { 0  ,   0   ,   0   ,   0   ,   0 } 
+    typedef int tArrayContadores[NUM_COLORES];
+    tArrayContadores contadores = {0};
 
-    for(int j = 0; j < NUM_COLUMNAS; j++){      
+    for (int j = 0; j < NUM_COLUMNAS; j++)
+    {
         tColor colorFondo = pantalla[fila][j].colorFondo;
-        arrayContadores[colorFondo]++;         
+        contadores[colorFondo]++;
     }
-    
+
     // BUSQUEDA DEL MAXIMO VALOR DE UN ARRAY
     int indiceMaximo = 0;
-    for(int i = 0; i < NUM_COLORES; i++){
-        if(arrayContadores[i] > indiceMaximo){
+    for (int i = 0; i < NUM_COLORES; i++)
+    {
+        if (contadores[i] > indiceMaximo)
+        {
             indiceMaximo = i;
         }
     }
@@ -89,22 +93,31 @@ void primerParpadeante(const tPantalla pantalla, int &fila, int &columna)
     // ESQUEMA DE BUSQUEDA
     bool encontrado = false;
     int indiceFila = 0, indiceColumna;
-    
-    while(indiceFila < NUM_FILAS && !encontrado){
+
+    while (indiceFila < NUM_FILAS && !encontrado)
+    {
         indiceColumna = 0;
-        while(indiceColumna < NUM_COLUMNAS && !encontrado){
-            if(pantalla[indiceFila][indiceColumna].parpadea == true){
+        while (indiceColumna < NUM_COLUMNAS && !encontrado)
+        {
+            if (pantalla[indiceFila][indiceColumna].parpadea == true)
+            {
                 fila = indiceFila;
                 columna = indiceColumna;
                 encontrado = true;
-            }else{
+            }
+            else
+            {
                 indiceColumna++;
             }
         }
-        indiceFila++;
+        if (!encontrado)
+        {
+            indiceFila++;
+        }
     }
 
-    if(!encontrado){
+    if (!encontrado)
+    {
         fila = -1;
         columna = -1;
     }
