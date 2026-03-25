@@ -9,44 +9,62 @@ using namespace std;
 	
 
 void inicializar(tPlantilla& plantilla) {
-	// impleméntalo...
-
+	plantilla.numEmpleados = 0;
+	plantilla.empleados = new tEmpleado[MAX_EMPLEADOS];	
+	plantilla.capacidad = MAX_EMPLEADOS;
 }
 
 
 void destruir(tPlantilla& plantilla) {
-	// impleméntalo...
+	delete [] plantilla.empleados;		// Liberamos la memoria para que no haya fugas
+	plantilla.numEmpleados = 0;			// De aqui hacia adelante es por seguridad.
+	plantilla.empleados = nullptr;
+	plantilla.capacidad = 0;
 
 }
-
 
 // PRIVADO
 // Redimensiona la lista y la deja con los mismos datos.
 // Si el incremento es positivo, se amplia la lista. Si es negativo, se reduce
-// Lo usarán insertarFinal, eliminarUltimo y eliminarTodos
+// Lo usaron insertarFinal, eliminarUltimo y eliminarTodos
 void redimensionar(tPlantilla &plantilla, int incremento)  {
-	// impleméntalo...
+	tPtrEmp aux;
+	plantilla.capacidad = plantilla.capacidad + incremento;
+	aux = new tEmpleado[plantilla.capacidad];
+
+	for(int i = 0; i < plantilla.numEmpleados ; i++){		// Si llamamaos a redimensionar es porque el contador tmbn nos indica cuantos empleados habia
+		aux[i] = plantilla.empleados[i];
+	}
 	
+	delete [] plantilla.empleados;		// Borramos la antigua direccion de memoria
+	plantilla.empleados = aux;			// Copiamos a nuestro puntero la nueva direccion de memoria
 }
 
 
 void insertarFinal(tPlantilla &plantilla, tEmpleado empleado) {
-	// impleméntalo...
-
+	if(plantilla.numEmpleados == plantilla.capacidad){
+		redimensionar(plantilla, MAX_EMPLEADOS);					// Crece en dos
+	}
+	plantilla.empleados[plantilla.numEmpleados]	 = empleado;
+	plantilla.numEmpleados++;
 }
-
 
 
 void eliminarUltimo(tPlantilla &plantilla) {
-	// implementalo...
-
+	if(plantilla.numEmpleados > 0){
+		plantilla.numEmpleados--;
+		if((plantilla.capacidad - plantilla.numEmpleados) >= 2*MAX_EMPLEADOS ){
+			redimensionar(plantilla, -MAX_EMPLEADOS);
+		}
+	}
 }
 
 
-
 void eliminarTodos(tPlantilla &plantilla) {
-	// implementalo...
-
+	plantilla.numEmpleados = 0;
+	if(plantilla.capacidad > 2*MAX_EMPLEADOS){
+		redimensionar(plantilla, -MAX_EMPLEADOS);
+	}	
 }
 
 
@@ -69,7 +87,7 @@ bool cargarEmpleadosFichero(string nombreArchivo, tPlantilla& plantilla) {
 	if (!archivo.is_open())
 		ok = false;
 	else {
-		// no hace falta controlar que la lista se llene porque el subprograma de inserción redimensiona
+		// no hace falta controlar que la lista se llene porque el subprograma de insercion redimensiona
 		while (cargaEmpleado(archivo, empleado))
 			insertarFinal(plantilla, empleado);
 		archivo.close();

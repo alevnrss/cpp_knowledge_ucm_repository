@@ -10,7 +10,7 @@ const string nombreArchivo = "plantilla.txt";
 
 
 int main(){
-	// instrucción para detectar fugas de memoria en VS
+	// instruccion para detectar fugas de memoria en VS
 	_CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF ); 
 
 
@@ -19,7 +19,7 @@ int main(){
 	if (cargarEmpleadosFichero(nombreArchivo, plantilla)) {
 		mostrar(plantilla);
 
-		// introducir aquí código para probar el resto de subprogramas
+		// introducir aqui codigo para probar el resto de subprogramas
 
 	}
 
