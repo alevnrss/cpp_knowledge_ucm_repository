@@ -1,0 +1,41 @@
+Arthur Dent
+42
+2
+0
+Bruce Wayne
+42
+4
+0
+Tony Stark
+42
+6
+3
+Max Eisenhardt
+42
+6
+3
+Bruce Banner
+42
+6
+0
+Peter Parker
+42
+4
+0
+Clark Kent
+42
+4
+3
+Steve Rogers
+42
+2
+0
+Oliver Queen
+42
+2
+0
+James Howlett
+42
+0
+0
+XXX

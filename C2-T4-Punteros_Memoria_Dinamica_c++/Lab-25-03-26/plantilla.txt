@@ -1,0 +1,33 @@
+Bruce Wayne
+42
+4
+0
+Tony Stark
+40
+6
+3
+Bruce Banner
+38
+6
+0
+Peter Parker
+36
+4
+0
+Clark Kent
+34
+4
+3
+Steve Rogers
+32
+2
+0
+Oliver Queen
+30
+2
+0
+James Howlett
+28
+0
+0
+XXX
